@@ -20,11 +20,7 @@ export default function Footer(){
                                         <li><a href="/trending" className="hover:text-sky-400 transition">Trending</a></li> 
                                         <li><a href="#" className="hover:text-sky-400 transition">About Us</a></li> 
 
-                                        {
-                                            path.startsWith("/policies") && <li style={{cursor:"pointer"}}>
-                                                <a className="hover:text-sky-400 transition" href="/login">Sign In</a>       
-                                            </li>
-                                        }
+
                                         {
                                             path !== "/login" && !path.startsWith("/policies") && <li style={{cursor:"pointer"}}>
                                         
