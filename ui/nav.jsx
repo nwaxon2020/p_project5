@@ -21,18 +21,21 @@ export default function Nav(){
         <nav className="bg-[rgba(0,0,0,0.3)]">
             <div className="flex p-3 px-10 flex-row justify-between items-end">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-[goldenrod] border-4"><img src="./logo.jpg" alt="Logo" /></div>
-                <ul className="text-gray-200 font-bold flex gap-40">
+                <ul className="text-gray-200 font-bold flex gap-30">
                     <li className={`cursor-pointer ${path==="/"? "text-[goldenrod]":"hover:text-gray-400"} transition ease-in-out duration-200`}>
                         <Link href={"/"}>Home</Link>
                     </li>
-                    <li className={`cursor-pointer ${path==="/about"? "text-[goldenrod]":"hover:text-gray-400"} transition ease-in-out duration-200`}>
-                        <Link href={"/about"}>About</Link>
+                    <li className={`cursor-pointer ${path==="/videos"? "text-[goldenrod]":"hover:text-gray-400"} transition ease-in-out duration-200`}>
+                        <Link href={"/videos"}>videos</Link>
+                    </li>
+                    <li className={`cursor-pointer ${path==="/trending"? "text-[goldenrod]":"hover:text-gray-400"} transition ease-in-out duration-200`}>
+                        <Link href={"/trending"}>Trending</Link>
                     </li>
                     <li className={`cursor-pointer ${path==="/news"? "text-[goldenrod]":"hover:text-gray-400"} transition ease-in-out duration-200`}>
                         <Link href={"/news"}>News</Link>
                     </li>
-                    <li className={`cursor-pointer ${path==="/contact"? "text-[goldenrod]":"hover:text-gray-400"} transition ease-in-out duration-200`}>
-                        <Link href={"/contact"}>Contact</Link>
+                    <li className={`cursor-pointer ${path==="/help"? "text-[goldenrod]":"hover:text-gray-400"} transition ease-in-out duration-200`}>
+                        <Link href={"/help"}>Help</Link>
                     </li>
                 </ul>
                 <div className="flex justify-center items-end gap-4">
