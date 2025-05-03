@@ -91,23 +91,23 @@ export default function Nav(){
                     <ul className="my-2">
 
                         <li className={`cursor-pointer ${path==="/"? "text-[goldenrod] hover:bg-gray-800":"hover:bg-gray-800"} transition ease-in-out duration-200`}>
-                            <Link className="py-3 pl-5 block border-b-1 border-gray-600" href={"/"}>Home</Link>
+                            <Link onClick={()=> setToggle(false)} className="py-3 pl-5 block border-b-1 border-gray-600" href={"/"}>Home</Link>
                         </li>
 
                         <li className={`cursor-pointer ${path==="/videos"? "text-[goldenrod] hover:bg-gray-800" :"hover:bg-gray-800"} transition ease-in-out duration-200`}>
-                            <Link className="py-3 pl-5 block border-b-1 border-gray-600" href={"/videos"}>videos</Link>
+                            <Link onClick={()=> setToggle(false)} className="py-3 pl-5 block border-b-1 border-gray-600" href={"/videos"}>videos</Link>
                         </li>
 
                         <li className={`cursor-pointer ${path==="/trending"? "text-[goldenrod] hover:bg-gray-800":"hover:bg-gray-800"} transition ease-in-out duration-200`}>
-                            <Link className="py-3 pl-5 block border-b-1 border-gray-600" href={"/trending"}>Trending</Link>
+                            <Link onClick={()=> setToggle(false)} className="py-3 pl-5 block border-b-1 border-gray-600" href={"/trending"}>Trending</Link>
                         </li>
 
                         <li className={`cursor-pointer ${path==="/news"? "text-[goldenrod] hover:bg-gray-800":"hover:bg-gray-800"} transition ease-in-out duration-200`}>
-                            <Link className="py-3 pl-5 block border-b-1 border-gray-600" href={"/news"}>News</Link>
+                            <Link onClick={()=> setToggle(false)} className="py-3 pl-5 block border-b-1 border-gray-600" href={"/news"}>News</Link>
                         </li>
 
                         <li className={`mb-5 cursor-pointer ${path==="/help"? "text-[goldenrod] hover:bg-gray-800":"hover:bg-gray-800"} transition ease-in-out duration-200`}>
-                            <Link className="py-3 pl-5 block" href={"/help"}>Help</Link>
+                            <Link onClick={()=> setToggle(false)} className="py-3 pl-5 block" href={"/help"}>Help</Link>
                         </li><hr />
 
                         <li className=" pt-5 pb-3 pl-5 text-gray-200 font-bold cursor-pointer hover:bg-gray-800 transition ease-in-out duration-200" onClick={()=> signOut()}>Sign Out</li>
