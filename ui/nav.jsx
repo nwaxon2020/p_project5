@@ -2,13 +2,27 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { signOut, useSession } from "next-auth/react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 export default function Nav(){
     //toggle side bar in mobile view
-    const [togleSidebar, setTogleSidebar] = useState(true);
-    const [toggle, setToggle] = useState(true)
+    const [togleSidebar, setTogleSidebar] = useState(false);
+    const [toggle, setToggle] = useState(false)
+
+    useEffect(()=>{
+        const handleSize = ()=>{
+            if(window.innerWidth > 640){
+                setTogleSidebar(false)
+                setToggle(false);
+            }else{
+                setTogleSidebar(true)
+            }
+        }
+        handleSize()
+        window.addEventListener("resize", handleSize);
+        return () => window.removeEventListener("resize", handleSize);
+    }, [])
 
     //session log in data
     const {data: session} = useSession()
@@ -56,16 +70,16 @@ export default function Nav(){
                         </>
                     }
 
-                    {toggle ? <div className={`${!togleSidebar && "hidden"}`} onClick={()=> setToggle(false)}><i className="fa fa-bars text-[goldenrod]" style={{fontSize:"30px"}}></i></div> : <
-                        div className={`${!togleSidebar && "hidden"}`} onClick={()=> setToggle(true)}><i className="fa fa-angle-double-down text-[goldenrod]" style={{fontSize:"30px"}}></i></div>
+                    {toggle ? <div className={`${!togleSidebar && "hidden"}`} onClick={()=> setToggle(false)}><i className="fa fa-angle-double-up text-[goldenrod]" style={{fontSize:"30px"}}></i></div> : <
+                        div className={`${!togleSidebar && "hidden"}`} onClick={()=> setToggle(true)}><i className="fa fa-bars text-[goldenrod]" style={{fontSize:"30px"}}></i></div>
                     }
 
                 </div><hr className="text-gray-200"/>
 
             </nav>
 
-            {togleSidebar &&
-                <div  className="w-full py-6 px-2 bg-[rgba(0,0,0,0.6)] text-gray-200 font-bold flex flex-col rounded-br-[10px]">
+            {togleSidebar && toggle && 
+                <div className="z-1 slider-nav w-full py-6 px-2 bg-[rgba(0,0,0,0.6)] text-gray-200 font-bold flex flex-col rounded-br-[10px]">
 
                     <div className="pl-5 flex flex-col justify-end items-start gap-4 mb-5">
                         <div className="w-12 h-12 rounded-full overflow-hidden border-white border-2">
