@@ -81,7 +81,7 @@ export default function Nav() {
                         <div className="w-12 h-12 rounded-full overflow-hidden border-white border-2">
                             <img src={profilePic || "./profile.png"} alt="Profile" />
                         </div>
-                        <small className="text-[goldenrod]">{profileName}</small>
+                        <small className="text-[goldenrod] mt-[-1rem] font-[cursive]">{profileName}</small>
                     </div>
                     <hr />
 
