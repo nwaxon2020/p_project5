@@ -88,27 +88,27 @@ export default function Nav() {
                     {/* Menu Links (one by one) */}
                     <ul className="my-2 w-full">
                         <li className={`cursor-pointer ${path === "/" ? "text-[goldenrod]" : ""} hover:bg-gray-800 transition`}>
-                            <Link className="block py-3 pl-5 border-b border-gray-600" href="/">
+                            <Link onClick={()=> setToggle(false)} className="block py-3 pl-5 border-b border-gray-600" href="/">
                                 Home
                             </Link>
                         </li>
                         <li className={`cursor-pointer ${path === "/videos" ? "text-[goldenrod]" : ""} hover:bg-gray-800 transition`}>
-                            <Link className="block py-3 pl-5 border-b border-gray-600" href="/videos">
+                            <Link onClick={()=> setToggle(false)} className="block py-3 pl-5 border-b border-gray-600" href="/videos">
                                 Videos
                             </Link>
                         </li>
                         <li className={`cursor-pointer ${path === "/trending" ? "text-[goldenrod]" : ""} hover:bg-gray-800 transition`}>
-                            <Link className="block py-3 pl-5 border-b border-gray-600" href="/trending">
+                            <Link onClick={()=> setToggle(false)} className="block py-3 pl-5 border-b border-gray-600" href="/trending">
                                 Trending
                             </Link>
                         </li>
                         <li className={`cursor-pointer ${path === "/news" ? "text-[goldenrod]" : ""} hover:bg-gray-800 transition`}>
-                            <Link className="block py-3 pl-5 border-b border-gray-600" href="/news">
+                            <Link onClick={()=> setToggle(false)} className="block py-3 pl-5 border-b border-gray-600" href="/news">
                                 News
                             </Link>
                         </li>
                         <li className={`cursor-pointer ${path === "/help" ? "text-[goldenrod]" : ""} hover:bg-gray-800 transition`}>
-                            <Link className="block py-3 pl-5" href="/help">
+                            <Link onClick={()=> setToggle(false)} className="block py-3 pl-5" href="/help">
                                 Help
                             </Link>
                         </li>
