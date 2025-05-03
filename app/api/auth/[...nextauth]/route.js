@@ -1,12 +1,19 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google"
+import FaceBook from "next-auth/providers/facebook"
 
 const autOpions = {
     providers:[
         Google({
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        }),
+
+        FaceBook({
+            clientId: process.env.FACEBOOK_APP_ID,
+            clientSecret: process.env.FACEBOOK_APP_SECRET,
         })
+
     ],
 
     session:{

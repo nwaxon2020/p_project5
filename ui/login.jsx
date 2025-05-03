@@ -22,7 +22,9 @@ export default function LoginUi(){
                         >
                             <i className="fa fa-google text-red-600 mx-auto"></i>oogle
                         </button>
-                        <button className="mx-auto mb-6 bg-gray-200 text-[1.2rem] md:text-[1.5rem] font-bold hover:bg-blue-300 transition ease-in-out duration-200 text-black p-3 w-[65%] rounded-[1rem]">
+                        <button className="mx-auto mb-6 bg-gray-200 text-[1.2rem] md:text-[1.5rem] font-bold hover:bg-blue-300 transition ease-in-out duration-200 text-black p-3 w-[65%] rounded-[1rem]"
+                            onClick={async()=> (setLoading(true), await signIn("facebook", {callbackUrl:"/"}))}
+                        >
                         <i className="fa fa-facebook text-blue-700 mx-auto"></i>aceBook
                         </button>
                     
