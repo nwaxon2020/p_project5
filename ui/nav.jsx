@@ -55,7 +55,7 @@ export default function Nav() {
                             Sign Out
                         </p>
                         <div className="w-15 h-15 rounded-full overflow-hidden border-white border-2">
-                            <img src={profilePic || "./profile.png"} alt="Profile" />
+                            <img className="w-full" src={profilePic || "./profile.png"} alt="Profile" />
                         </div>
                         <small className="text-[goldenrod]">{profileName}</small>
                     </div>
